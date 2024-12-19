@@ -2,7 +2,7 @@ from models.avaliacoes import Avaliacoes
 
 class Restaurante:
     restaurantes = []
-    def __init__(self, nome, categoria) :
+    def __init__(self, nome, categoria) : 
         self._nome = nome
         self._categoria = categoria
         self._ativo = False
@@ -29,13 +29,15 @@ class Restaurante:
         return "☑" if self._ativo else "☐"
 
     def adiciona_avaliacao(self, cliente, nota):
+        if 0 <= nota <= 5 :
+            return print("Nota deve estar entre 0 e 5")
         avaliacao = Avaliacoes(cliente, nota)
         self._avaliacoes.append(avaliacao)
 
     @property
     def calcula_media_avaliacoes(self):
         if not self._avaliacoes:
-            return 0
+            return '-'
         soma_das_notas = sum([avaliacao._nota for avaliacao in self._avaliacoes])
         total_de_notas = len(self._avaliacoes)
         return round(soma_das_notas / total_de_notas, 1)
