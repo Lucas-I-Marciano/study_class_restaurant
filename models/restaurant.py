@@ -24,12 +24,3 @@ class Restaurante:
     def ativo(self):
         return "☑" if self._ativo else "☐"
 
-
-restaurante_sushi = Restaurante('Sushi', 'japonesa')
-restaurante_praca = Restaurante('Praca', 'italiana')
-restaurante_praca.alterna_status()
-
-print('\nrestaurante_sushi:', restaurante_sushi)
-
-Restaurante.lista_restaurantes()
-
