@@ -9,11 +9,12 @@ class Restaurante:
     def __str__(self) :
         return f'{self.nome} | {self.categoria} | {self.ativo}'
 
-    def lista_restaurantes() :
+    @classmethod
+    def lista_restaurantes(cls) :
         print('-'*60)
         print('Nome'.ljust(20), "|", "Categoria".ljust(20), "|", "Status")
         print('-'*60)
-        for restaurante in Restaurante.restaurantes :
+        for restaurante in cls.restaurantes :
             print(restaurante.nome.ljust(20), "|", restaurante.categoria.ljust(20), "|", restaurante.ativo)
 
     @property
