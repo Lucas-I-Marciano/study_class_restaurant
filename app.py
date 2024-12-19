@@ -6,9 +6,9 @@ restaurante_kfc = Restaurante("KFC", "fast-food")
 restaurante_sujinho = Restaurante("Sujinho", "brasileira")
 
 restaurante_kanpek.alterna_status()
-restaurante_kanpek.adiciona_avaliacao("Lucas", 10)
-restaurante_kanpek.adiciona_avaliacao("Thaina", 10)
-restaurante_kanpek.adiciona_avaliacao("Adriana", 7)
+restaurante_kanpek.adiciona_avaliacao("Lucas", 5)
+restaurante_kanpek.adiciona_avaliacao("Thaina", 5)
+restaurante_kanpek.adiciona_avaliacao("Adriana", 4)
 
 
 def main():
