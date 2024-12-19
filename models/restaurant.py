@@ -1,13 +1,16 @@
 class Restaurante:
     restaurantes = []
     def __init__(self, nome, categoria) :
-        self.nome = nome
-        self.categoria = categoria
+        self._nome = nome
+        self._categoria = categoria
         self._ativo = False
         Restaurante.restaurantes.append(self)
 
     def __str__(self) :
-        return f'{self.nome} | {self.categoria} | {self.ativo}'
+        return f'{self._nome} | {self._categoria} | {self.ativo}'
+
+    def alterna_status(self):
+        self._ativo = not self._ativo
 
     @classmethod
     def lista_restaurantes(cls) :
@@ -15,7 +18,7 @@ class Restaurante:
         print('Nome'.ljust(20), "|", "Categoria".ljust(20), "|", "Status")
         print('-'*60)
         for restaurante in cls.restaurantes :
-            print(restaurante.nome.ljust(20), "|", restaurante.categoria.ljust(20), "|", restaurante.ativo)
+            print(restaurante._nome.ljust(20), "|", restaurante._categoria.ljust(20), "|", restaurante.ativo)
 
     @property
     def ativo(self):
@@ -24,6 +27,7 @@ class Restaurante:
 
 restaurante_sushi = Restaurante('Sushi', 'japonesa')
 restaurante_praca = Restaurante('Praca', 'italiana')
+restaurante_praca.alterna_status()
 
 print('\nrestaurante_sushi:', restaurante_sushi)
 
