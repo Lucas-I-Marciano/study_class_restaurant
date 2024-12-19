@@ -4,6 +4,9 @@ class Restaurante:
         self.categoria = categoria
         self.ativo = False
 
+    def __str__(self) :
+        return f'{self.nome} | {self.categoria} | {self.ativo}'
+
 
 restaurante_sushi = Restaurante('Sushi', 'japonesa')
 print('\n',restaurante_sushi.nome)
@@ -13,4 +16,4 @@ print('\n',restaurante_praca.nome)
 
 print('\ndir: ', dir(restaurante_sushi))
 print('\nvars: ', vars(restaurante_sushi))
-print('\nrestaurante_sushi', restaurante_sushi)
+print('\nrestaurante_sushi:', restaurante_sushi)
