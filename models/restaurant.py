@@ -84,7 +84,7 @@ class Restaurante:
         print(subtitulo)
         print('*'*len(subtitulo))
         for i,item in enumerate(self._cardapio):
-            mensagem = f'.{str(i).ljust(3)} | {item._nome.ljust(25)} | {str(item._preco).ljust(5)}'
+            mensagem = f'.{str(i).ljust(3)} | {item._nome.ljust(25)} | {str(round(item._preco, 2)).ljust(5)}'
             if hasattr(item, '_descricao') :
                 mensagem = f'{mensagem} | {item._descricao}'
             if hasattr(item, '_tamanho') :
