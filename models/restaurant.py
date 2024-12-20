@@ -51,9 +51,10 @@ class Restaurante:
             (string): Mensagem caso o valor esteja inadequado
         """        
         if 0 <= nota <= 5 :
-            return print("Nota deve estar entre 0 e 5")
-        avaliacao = Avaliacoes(cliente, nota)
-        self._avaliacoes.append(avaliacao)
+            avaliacao = Avaliacoes(cliente, nota)
+            self._avaliacoes.append(avaliacao)
+            return
+        return print("Nota deve estar entre 0 e 5")
 
     @property
     def calcula_media_avaliacoes(self):
