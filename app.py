@@ -14,13 +14,20 @@ restaurante_kanpek.adiciona_avaliacao("Thaina", 5)
 restaurante_kanpek.adiciona_avaliacao("Adriana", 4)
 # ---------------------------------------------------------------
 
-bebida_coca = ItemBebida("Coke", 12, "Grande")
-prato_strogo = ItemPrato("Sashimi", 25, "Fatias de salmão cru")
+bebida_coca = ItemBebida("Coke", 12.99, "Grande")
+prato_sushi_salmao = ItemPrato("Sashimi de Salmão", 25.50, "Fatias de salmão cru")
+prato_sushi_atum = ItemPrato("Sashimi de Atum", 20, "Fatias de atum cru")
+prato_temaki = ItemPrato("Temaki", 12.99, "Temaki califórnia")
+prato_misoshiro = ItemPrato("Misoshiro", 25, "Sopa de soja")
+restaurante_kanpek.adiciona_item_no_cardapio(prato_sushi_salmao)
+restaurante_kanpek.adiciona_item_no_cardapio(prato_sushi_atum)
+restaurante_kanpek.adiciona_item_no_cardapio(prato_temaki)
+restaurante_kanpek.adiciona_item_no_cardapio(prato_misoshiro)
+restaurante_kanpek.adiciona_item_no_cardapio(bebida_coca)
 
 def main():
-    os.system('cls')    
-    print(prato_strogo)
-    print(bebida_coca)
+    os.system('cls')
+    restaurante_kanpek.lista_cardapio
 
     
     
